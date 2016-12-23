@@ -1,0 +1,9 @@
+La soluzione al problema proposto è stata implementata tentando di riprodurre la descrizione e di rispettare le specifiche fornite dal testo testando ogni componente singolarmente. 
+I buffer del provider e dell'accepter sono stati implementati come strutture singleton globali. 
+L'accepter, il dispatcher ed il provider sono stati implementati come dei singoli flussi thread che eseguono le rispettive funzioni. 
+I reader sono stati implementati tramite una struttura dati composta da un nome, un reader buffer, un tempo di processamento randomico ed un flusso thread.
+Nel file main.c è stato implementato un esempio di esecuzione che porta alla creazione di 4 reader, tramite l'accepter, ed al consumo, da parte di essi, di 4 messaggi inviati dal provider e inoltrati ad essi dal dispatcher.
+
+Per facilitare la compilazione è stato scritto un Makefile che porta alla creazione di 7 eseguibili (uno per il main, chiamato prog, e gli altri per i test relativi alle varie componenti)
+
+Ulteriori dettagli di implementazione sono presenti nei commenti al codice.
